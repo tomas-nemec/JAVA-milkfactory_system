@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="controller.GUI.SkladController">
+   <children>
+      <Label layoutX="34.0" layoutY="121.0" text="Cukor (kg)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="166.0" text="Mlieko (l)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="210.0" text="Jahody (kg)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="250.0" text="Broskyne (kg)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cukorTextField" layoutX="148.0" layoutY="118.0" promptText="0" />
+      <TextField fx:id="mliekoTextField" layoutX="148.0" layoutY="163.0" promptText="0" />
+      <TextField fx:id="jahodyTextField" layoutX="148.0" layoutY="207.0" promptText="0" />
+      <TextField fx:id="broskyneTextField" layoutX="148.0" layoutY="247.0" promptText="0" />
+      <Button layoutX="189.0" layoutY="325.0" mnemonicParsing="false" onAction="#objednajClicked" text="Objednať" />
+      <Button layoutX="29.0" layoutY="418.0" mnemonicParsing="false" onAction="#changeToMainMenu" text="Back to Main Menu" />
+      <Label layoutX="334.0" layoutY="78.0" text="Pocet na sklade">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cukorLab" layoutX="334.0" layoutY="121.0" text="Cukor">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mliekoLab" layoutX="334.0" layoutY="166.0" text="Mlieko">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="jahodyLab" layoutX="334.0" layoutY="210.0" text="Jahody">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="broskyneLab" layoutX="334.0" layoutY="250.0" text="Broskyne">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="solTextField" layoutX="148.0" layoutY="289.0" promptText="0" />
+      <Label layoutX="37.0" layoutY="292.0" text="Sol (kg)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="solLab" layoutX="337.0" layoutY="292.0" text="Sol">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="oznam" layoutX="175.0" layoutY="80.0" text="Succesfull" textFill="#fc0000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="37.0" text="Suroviny na sklade:">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="420.0" text="FINANCIE:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabFinancie" layoutX="383.0" layoutY="422.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

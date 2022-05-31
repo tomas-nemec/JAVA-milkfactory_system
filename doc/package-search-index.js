@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"controller.GUI"},{"l":"model.employees"},{"l":"model.exceptions"},{"l":"model.klienti"},{"l":"model.mliekaren"},{"l":"model.produkty"},{"l":"model.sklad"}]

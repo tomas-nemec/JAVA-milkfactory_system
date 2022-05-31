@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1225</x>
+      <y>0</y>
+      <w>85</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>GUI
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>955</x>
+      <y>0</y>
+      <w>170</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Mliekaren
+Package::model.mliekaren
+--
+-nazov:String
+-financie:double
+-ZoznamZamestnancov:ArrayList&lt;Zamestnanec&gt;
+-ZoznamKlientov:ArrayList&lt;Klient&gt;
+-ZoznamUserov:ArrayList&lt;User&gt;
+-Sklad:SKLAD
+_-Mliekaren:Singleton_mliekaren_
+-Veduci_mliekarne:veduciMliekarne
+-User:loggedIN
+--
+-Mliekaren():
+_+getDefaultInstance():Mliekaren_
++login(String,String):User
++logoutClicked():void
++vyplata():void
++pridajZam(String,String,String,String,String):void
++vyhodZam(ObservableList&lt;Zamestnanec&gt;):void
++pridajKlienta(String,String,String):void
++vyhodKlienta(ObservableList&lt;Klient&gt;):void
++vyrobProdukt(int,int,int,int):String
++vyvozTovar(int,int,int,int):void7
+GETTERY + SETTERY
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>0</y>
+      <w>115</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>0</y>
+      <w>85</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>825</x>
+      <y>290</y>
+      <w>125</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>Person
+Package::model.employees
+--
+-name:String
+-surname:String
+--
++getName():String
++getSurname():String
++setName(String):void
++setSurname(String):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1035</x>
+      <y>640</y>
+      <w>175</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Zamestnanec
+Package::model.employees
+--
+#Sklad:sklad;
+#available:boolean
+#mzda:double
+_#DPH:double_
+#int:ucet;
+--
++Zamestnanec(String,String,String,String,Sklad):void
++vyplata():void
++getAvailable():boolean </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>775</x>
+      <y>850</y>
+      <w>185</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Veduci_Mliekarne
+Package::model.employees
+--
+-Sklad:sklad
+_-Veduci_mliekarne_
+--
+-Veduci_mliekarne(String,String,String,String,Sklad):void
+_+getDefaultInstance(Sklad):Veduci_mliekarne_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1140</x>
+      <y>850</y>
+      <w>150</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Syrar
+Package::model.employees
+--
++Syrar(String,String,String,String,Sklad):void
++pracuj(String):void
++vyplata():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1300</x>
+      <y>850</y>
+      <w>160</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Rozvazac
+Package::model.employees
+--
+--
++Jogurtar(String,String,String,String,Sklad):void
++vyplata():void
++pracuj(int,String,Klient):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>35</y>
+      <w>105</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Produkt
+Package::model.produkty
+--
+#cena:double
+--
++getCena():double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>635</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Klient
+Package::model.klienti
+--
+-financie:double
+-nazov:String
+-ZoznamProduktov:ArrayList&lt;Produkt&gt;
+--
++Klient(String,StringString):void
++pocetProduktov():int
++zaplat():void
++getFinancie():double
++getNazov():String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>185</x>
+      <y>180</y>
+      <w>115</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Jogurt
+Package::model.produkty
+--
+_#spotrebaCukor:int_
+_#spotrebaMlieko:int_
+--
+_+getSpotrebaCukor_
+_+getSpotrebaMlieko_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>180</y>
+      <w>110</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Syr
+Package::model.produkty
+--
+_#spotrebaSol:int_
+_#spotrebaMlieko:int_
+--
+_+getSpotrebaSol_
+_+getSpotrebaMlieko_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>0</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Sklad
+Package::model.sklad
+--
+-mlieko:int
+-sol:int
+-cukor:int
+-broskyne:int
+-jahody:int
+-priceSol:double;
+-priceCuk:double
+-priceMilk:double
+-priceJah:double
+-priceBros:double
+-jahodoveJogurtyNaSklade:ArrayList&lt;Jahodovy_jogurt&gt;
+-broskynoveJogurtyNaSklade:ArrayList&lt;Broskynovy_jogurt&gt;
+-pareniceNaSklade:ArrayList&lt;Parenica&gt;
+-korbaceNaSklade:ArrayList&lt;Korbace&gt;
+--
++pridajJogurt(Jogurt):void
++pridajSyr(Syr):void
++vypisProduktov():void
+GETTERY + SETTERY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>125</x>
+      <y>295</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Jahodovy_jogurt
+Package::model.produkty
+--
+_-spotrebaJahod:int_
+--
+_+getSpotrebaJahod_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>295</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Broskynovy_jogurt
+Package::model.produkty
+--
+_-spotrebaBroskyn:int_
+--
+_+getSpotrebaBroskyn_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>295</y>
+      <w>95</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Parenica
+Package::model.produkty
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>295</y>
+      <w>100</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Ostiepok
+Package::model.produkty
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>5</y>
+      <w>115</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>825</x>
+      <y>435</y>
+      <w>125</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>User
+Package::model.employees
+--
+-login:String
+-password:String
+--
++checkLogin(String,String):boolean
++getName():String
++getSurname():String
++setName(String):void
++setSurname(String):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>850</y>
+      <w>160</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Jogurtar
+Package::model.employees
+--
+-bonus:int
+--
++Jogurtar(String,String,String,String,Sklad):void
++vyplata():void
++pracuj(String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>745</y>
+      <w>90</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;120.0;10.0;120.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1125</x>
+      <y>800</y>
+      <w>85</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1185</x>
+      <y>800</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;380.0;10.0;380.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>800</y>
+      <w>195</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>370.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>545</y>
+      <w>250</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;480.0;90.0;480.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>585</y>
+      <w>195</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>370.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>885</x>
+      <y>400</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>505</x>
+      <y>670</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+**Klient_interface**
+Package::model.klenti
+--
++getNazov():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>690</y>
+      <w>75</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1285</x>
+      <y>660</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+**ZamInterface**
+Package::model.employees
+--
+changeAvailable(Zamestnanec):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1205</x>
+      <y>680</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>250</y>
+      <w>70</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;120.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>275</y>
+      <w>75</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>235</x>
+      <y>250</y>
+      <w>55</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;90.0;60.0;90.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>275</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>355</x>
+      <y>120</y>
+      <w>125</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;230.0;90.0;230.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>235</x>
+      <y>160</y>
+      <w>135</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>70</y>
+      <w>275</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>530.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>10</y>
+      <w>350</w>
+      <h>485</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>680.0;10.0;680.0;950.0;10.0;950.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>175</y>
+      <w>395</w>
+      <h>720</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>750.0;10.0;750.0;540.0;10.0;540.0;10.0;1420.0;770.0;1420.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>70</y>
+      <w>670</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>1320.0;1140.0;10.0;1140.0;10.0;10.0;620.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>475</x>
+      <y>755</y>
+      <w>155</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+**Klient_interface.Klient_interface_nested**
+Package::model.klenti
+--
++zaplat(double):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>715</y>
+      <w>15</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>
