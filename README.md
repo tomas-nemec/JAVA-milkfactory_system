@@ -1,6 +1,8 @@
 <h1>School project: Create system for Milkfactory using OOP</h1>
-# To run the project go to: src/controller/GUI/main.java #
-# Need to install JavaFX to run the program #
+
+### = To run the project go to: src/controller/GUI/main.java 
+
+### = Need to install JavaFX to run the program 
 
 I have decided to create system for Milkfactory where: 
 - all employees can log in, see earned money, change their availability
